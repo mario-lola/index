@@ -1,11 +1,161 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SPX EXPRESS</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SPX • SOC Operations Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <H1>SPX EXPRESS</H1>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="brand-mark">SPX <span>LIVE</span></div>
+        <div class="site-select">Tamalanrea DC <span>⌄</span></div>
+      </div>
+
+      <div class="search-box">
+        <span>⌕</span>
+        <input id="menuSearch" type="text" placeholder="Search menu..." />
+      </div>
+
+      <nav class="nav" id="navMenu">
+        <a class="nav-item active" href="#"><span class="nav-icon">▦</span>Dashboard <b>⌃</b></a>
+        <a class="nav-item sub active-sub" href="#">MM Operation <b>⌄</b></a>
+        <a class="nav-item sub" href="#">In-Station <b>⌄</b></a>
+        <a class="nav-item sub" href="#">Productivity</a>
+
+        <a class="nav-item" href="#"><span class="nav-icon">◫</span>Pickup <b>⌄</b></a>
+        <a class="nav-item" href="#"><span class="nav-icon">✓</span>Inbound <b>⌄</b></a>
+        <a class="nav-item" href="#"><span class="nav-icon">▣</span>Outbound <b>⌄</b></a>
+        <a class="nav-item" href="#"><span class="nav-icon">◈</span>Audit Management <b>⌄</b></a>
+        <a class="nav-item" href="#"><span class="nav-icon">◉</span>Return <b>⌄</b></a>
+        <a class="nav-item" href="#"><span class="nav-icon">▤</span>Ticket Management <b>⌄</b></a>
+        <a class="nav-item" href="#"><span class="nav-icon">!</span>Exception Handling <b>⌄</b></a>
+        <a class="nav-item" href="#"><span class="nav-icon">⌂</span>Station Management <b>⌄</b></a>
+        <a class="nav-item" href="#"><span class="nav-icon">◒</span>CCTV Management <b>⌄</b></a>
+        <a class="nav-item" href="#"><span class="nav-icon">♙</span>My Approval <b>⌄</b></a>
+        <a class="nav-item" href="#"><span class="nav-icon">▣</span>Case Management <b>⌄</b></a>
+        <a class="nav-item" href="#"><span class="nav-icon">▰</span>Order Management <b>⌄</b></a>
+        <a class="nav-item" href="#"><span class="nav-icon">▸</span>LineHaul <b>⌄</b></a>
+        <a class="nav-item" href="#"><span class="nav-icon">●</span>Workforce Management <b>⌄</b></a>
+      </nav>
+
+      <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">☰</button>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div class="breadcrumb">Dashboard <span>/</span> <strong>MM Operation</strong></div>
+        <div class="top-actions">
+          <button class="edu-btn">⌂ <span>Pusat Edukasi SPX Express</span></button>
+          <button class="icon-btn" title="Security">♢</button>
+          <button class="icon-btn" title="Notifications">♧</button>
+          <button class="icon-btn" title="Tasks">▤</button>
+          <button class="language">Bahasa Indonesia⌄</button>
+          <div class="avatar">S</div>
+          <button class="user-menu">supriadi.supriadi⌄</button>
+        </div>
+      </header>
+
+      <section class="content">
+        <div class="page-heading">
+          <div>
+            <div class="eyebrow">OPERATIONS CONTROL CENTER</div>
+            <h1>Dashboard SOC</h1>
+          </div>
+          <button class="mobile-link">Unduh Aplikasi Mobile <span>›</span></button>
+        </div>
+
+        <div class="status-strip">
+          <span class="live-dot"></span>
+          <span>System Live</span>
+          <span class="divider"></span>
+          <span id="lastUpdated">Updated 18 Sep 13:06</span>
+          <span class="status-right">Forward & Return</span>
+        </div>
+
+        <div class="grid two">
+          <article class="card forecast-card">
+            <div class="section-title"><i></i><span>Forecast (Forward & Return)</span><small>?</small></div>
+            <div class="updated">Updated: 17 Sep 13:45 (Data dari 18 Sep 00:00 - 18 Sep 23:59)</div>
+            <div class="metric-label">Estimasi total inbound SOC</div>
+            <div class="big-number orange">609.570 <span class="pulse">●</span></div>
+            <div class="submetric">Estimasi yang akan di-inbound <strong>196.453</strong> <span class="warning">●</span></div>
+            <div class="sparkline"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+          </article>
+
+          <article class="card order-card">
+            <div class="section-title"><i></i><span>Order Volume (Forward & Return)</span><small>?</small></div>
+            <div class="updated">Updated: 18 Sep 13:01 (Data dari 18 Sep 00:00 - 19 Sep 00:00)</div>
+            <div class="metric-label">SOC Total Inbounded Orders</div>
+            <div class="big-number">424.957</div>
+            <div class="metric-label second">Total Inbounded TO</div>
+            <div class="mid-number">15.863</div>
+            <div class="chips">
+              <span>Bag 5611</span><span>Bag Implant (NS) 100</span><span>Bulky 9795</span><span>Bulky HV 173</span>
+              <span>Error 22</span><span>LTL HV 6</span><span>Liquid 155</span><span>Non-Conveyable 1</span>
+            </div>
+          </article>
+        </div>
+
+        <article class="card linehaul-card">
+          <div class="card-head">
+            <div>
+              <div class="section-title"><i></i><span>Incoming Volume to SOC (Forward & Return)</span><small>?</small></div>
+              <div class="updated">Updated: 18 Sep 13:06</div>
+            </div>
+            <button class="text-link" id="tripListBtn">Linehaul Trip List ›</button>
+          </div>
+          <div class="mini-title">Linehaul</div>
+          <div class="stats three">
+            <div><span>Trips</span><strong>487</strong></div>
+            <div><span>Order</span><strong>2.716.567</strong></div>
+            <div><span>TO</span><strong>112.821</strong><small>39718 Bag | 42 Bag Implant (NS) | 61595 Bulky | 8950 Bulky HV | 34 Error | 799 LTL HV | 1680 Liquid | 3 Non-Conveyable</small></div>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>ETA</th><th>Trips</th><th>TO</th><th>Order</th></tr></thead>
+              <tbody>
+                <tr><td>≤ 1 hour</td><td>2</td><td>120</td><td>5.638</td></tr>
+                <tr><td>≤ 6 hours</td><td>6</td><td>329</td><td>11.693</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+
+        <article class="card progress-card">
+          <div class="card-head">
+            <div>
+              <div class="section-title"><i></i><span>Operation Progress (Forward & Return)</span><small>?</small></div>
+              <div class="updated">Updated: 18 Sep 13:05</div>
+            </div>
+            <button class="text-link" id="detailBtn">Detail ›</button>
+          </div>
+          <div class="progress-grid">
+            <div class="progress-block">
+              <div class="progress-heading"><span>SOC</span><strong>369.135 <em>(17,8%)</em></strong></div>
+              <div class="progress-track"><div style="width:17.8%"></div></div>
+              <div class="progress-row"><span>Transported</span><b>35.285 (1,7%)</b></div>
+              <div class="progress-row">↳ LH from SOC <b>38.622 (1,7%)</b></div>
+              <div class="progress-row">↳ LH from FMHub <b>960 (0%)</b></div>
+              <div class="progress-row">↳ LH from LMHub <b>2.978 (0%)</b></div>
+            </div>
+            <div class="progress-block">
+              <div class="progress-heading"><span>LH Transporting/4PL</span><strong>1.709.357 <em>(82,2%)</em></strong></div>
+              <div class="progress-track"><div style="width:82.2%"></div></div>
+              <div class="progress-row"><span>LH Transporting</span><b>1.709.357 (82,2%)</b></div>
+              <div class="progress-row"><span>4PL Handover</span><b>0 (0%)</b></div>
+            </div>
+          </div>
+        </article>
+
+        <div class="floating-tools"><button title="Quick settings">☷</button></div>
+      </section>
+    </main>
+  </div>
+
+  <div class="toast" id="toast"></div>
+  <script src="app.js"></script>
 </body>
 </html>
